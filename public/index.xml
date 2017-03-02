@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TotalSoft</title>
+    <link>https://adamklim.github.io/index.xml</link>
+    <description>Recent content on TotalSoft</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://adamklim.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>https://adamklim.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamklim.github.io/about/</guid>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}&#34;&gt;
+
+  {{ partial &#34;head.html&#34; . }}
+
+  &lt;body id=&#34;page-top&#34; class=&#34;index&#34;&gt;
+    {{ partial &#34;nav1.html&#34; . }}
+
+    {{ if .Site.Params.about.enable }}
+      {{ partial &#34;about.html&#34; . }}
+    {{ end }}
+
+    {{ if .Site.Params.contact.enable }}
+      {{ partial &#34;contact.html&#34; . }}
+    {{ end }}
+
+    {{ if .Site.Params.portfolio.enable }}
+      {{ partial &#34;modals.html&#34; . }}
+    {{ end }}
+
+    {{ partial &#34;js.html&#34; . }}
+  &lt;/body&gt;
+&lt;/html&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://adamklim.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamklim.github.io/contact/</guid>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}&#34;&gt;
+
+  {{ partial &#34;head.html&#34; . }}
+
+  &lt;body id=&#34;page-top&#34; class=&#34;index&#34;&gt;
+    {{ partial &#34;nav.html&#34; . }}
+
+    {{ if .Site.Params.contact.enable }}
+      {{ partial &#34;contact.html&#34; . }}
+    {{ end }}
+
+    {{ if .Site.Params.footer.enable }}
+      {{ partial &#34;footer.html&#34; . }}
+    {{ end }}
+
+    {{ partial &#34;js.html&#34; . }}
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://adamklim.github.io/form/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamklim.github.io/form/</guid>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}&#34;&gt;
+
+  {{ partial &#34;head.html&#34; . }}
+
+  &lt;body id=&#34;page-top&#34; class=&#34;index&#34;&gt;
+    {{ partial &#34;nav1.html&#34; . }}
+    {{ partial &#34;form.html&#34; . }}
+
+    {{ if .Site.Params.services.enable }}
+      &lt;!-- {{ partial &#34;services.html&#34; . }} --&gt;
+    {{ end }}
+
+    {{ if .Site.Params.portfolio.enable }}
+      &lt;!-- {{ partial &#34;portfolio.html&#34; . }} --&gt;
+    {{ end }}
+
+    {{ if .Site.Params.about.enable }}
+      &lt;!-- {{ partial &#34;about.html&#34; . }} --&gt;
+    {{ end }}
+
+    {{ if .Site.Params.team.enable }}
+      &lt;!-- {{ partial &#34;team.html&#34; . }} --&gt;
+    {{ end }}
+
+    {{ if .Site.Params.clients_list.enable }}
+      &lt;!-- {{ partial &#34;clients.html&#34; . }} --&gt;
+    {{ end }}
+
+    {{ if .Site.Params.contact.enable }}
+      &lt;!-- {{ partial &#34;contact.html&#34; . }} --&gt;
+    {{ end }}
+
+    {{ if .Site.Params.footer.enable }}
+      &lt;!-- {{ partial &#34;footer.html&#34; . }} --&gt;
+    {{ end }}
+
+    {{ if .Site.Params.portfolio.enable }}
+      &lt;!-- {{ partial &#34;modals.html&#34; . }} --&gt;
+    {{ end }}
+
+    {{ partial &#34;js.html&#34; . }}
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://adamklim.github.io/products/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamklim.github.io/products/</guid>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}&#34;&gt;
+
+  {{ partial &#34;head.html&#34; . }}
+
+  &lt;body id=&#34;page-top&#34; class=&#34;index&#34;&gt;
+    {{ partial &#34;nav1.html&#34; . }}
+    &lt;!-- {{ partial &#34;hero.html&#34; . }} --&gt;
+
+    {{ if .Site.Params.services.enable }}
+      {{ partial &#34;services.html&#34; . }}
+    {{ end }}
+
+    {{ if .Site.Params.portfolio.enable }}
+      {{ partial &#34;portfolio.html&#34; . }}
+    {{ end }}
+
+        {{ if .Site.Params.contact.enable }}
+      {{ partial &#34;contact.html&#34; . }}
+    {{ end }}
+
+
+    {{ if .Site.Params.portfolio.enable }}
+      {{ partial &#34;modals.html&#34; . }}
+    {{ end }}
+
+    {{ partial &#34;js.html&#34; . }}
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://adamklim.github.io/technologies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamklim.github.io/technologies/</guid>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}&#34;&gt;
+
+  {{ partial &#34;head.html&#34; . }}
+
+  &lt;body id=&#34;page-top&#34; class=&#34;index&#34;&gt;
+    {{ partial &#34;nav.html&#34; . }}
+
+    {{ if .Site.Params.services.enable }}
+      {{ partial &#34;services.html&#34; . }}
+    {{ end }}
+
+    {{ if .Site.Params.portfolio.enable }}
+      {{ partial &#34;portfolio.html&#34; . }}
+    {{ end }}
+
+        {{ if .Site.Params.contact.enable }}
+      {{ partial &#34;contact.html&#34; . }}
+    {{ end }}
+
+    {{ if .Site.Params.footer.enable }}
+      {{ partial &#34;footer.html&#34; . }}
+    {{ end }}
+
+    {{ if .Site.Params.portfolio.enable }}
+      {{ partial &#34;modals.html&#34; . }}
+    {{ end }}
+
+    {{ partial &#34;js.html&#34; . }}
+  &lt;/body&gt;
+&lt;/html&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://adamklim.github.io/testimonials/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamklim.github.io/testimonials/</guid>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}&#34;&gt;
+
+  {{ partial &#34;head.html&#34; . }}
+
+  &lt;body id=&#34;page-top&#34; class=&#34;index&#34;&gt;
+    {{ partial &#34;nav1.html&#34; . }}
+
+
+      {{ partial &#34;testimonials.html&#34; . }}
+
+
+    {{ if .Site.Params.contact.enable }}
+      {{ partial &#34;contact.html&#34; . }}
+    {{ end }}
+
+    {{ if .Site.Params.portfolio.enable }}
+      {{ partial &#34;modals.html&#34; . }}
+    {{ end }}
+
+    {{ partial &#34;js.html&#34; . }}
+  &lt;/body&gt;
+&lt;/html&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
