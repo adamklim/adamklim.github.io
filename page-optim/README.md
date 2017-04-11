@@ -3,7 +3,7 @@ initial stats:
 27/29
 
 * pizzeria.jpg image resize (72/85)
-*
+* CSS - minified, inline, media="print" set for print ()
 
 
 
