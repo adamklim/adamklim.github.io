@@ -499,8 +499,6 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 
 // Moves the sliding background pizzas based on scroll position
 
-// CHANGES: made to function updatePositions to boost animation performance
-// CHANGES: querySelectorAll replaced with getElementsByClassName method, I could not see much performance improvement even though it's considered more efficent
 /* CHANGES: phase variable taken out of loop to avoid multiple layout recalculation, and since it only takes 5 values, they're stored in array
 this was HUGE performance booster */
 function updatePositions() {

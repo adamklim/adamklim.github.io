@@ -1,8 +1,8 @@
 This website is a part of performance optimization project for Udacity FEND course.
 For the project, a website was provided by Udacity, and was subsequently edited to improve performance in the following areas:
 1. Google PageSpeed Insights should indicate over 90/100 for mobile and desktop view for the main page.
-2. Animations on page /view/pizza.html should run at 60fps or more.
-3. Pizzas resize on page /view/pizza.html should be at 5ms or less.
+2. Animations on page /views/pizza.html should run at 60fps or more.
+3. Pizzas resize on page /views/pizza.html should be at 5ms or less.
 
 
 # Changes made:
@@ -28,7 +28,7 @@ Major bottleneck in function updatePositions - multiple layout recalculations we
 * Major bottleneck in function updatePositions - multiple layout recalculations triggered
 	* Variable phase had only 5 values, so it's taken out of loop that calculate pizzas position - fixes layout recalculation.
   * phase values are now stored in array.
-	* DOM method changed from .querySelectorAll to .getElementsByClassName
+  * DOM method changed from .querySelectorAll to .getElementsByClassName
 * Number of objects to be animated changed from fixed (200) to number relative to viewport size.
 
 
