@@ -448,11 +448,12 @@ var resizePizzas = function(size) {
   }
 
   // Iterates through pizza elements on the page and changes their widths
+  // CHANGES: querySelectorAll replaced with getElementsByClassName
   function changePizzaSizes(size) {
-    for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
-      var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
-      var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
-      document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
+    for (var i = 0; i < document.getElementsByClassName("randomPizzaContainer").length; i++) {
+      var dx = determineDx(document.getElementsByClassName("randomPizzaContainer")[i], size);
+      var newwidth = (document.getElementsByClassName("randomPizzaContainer")[i].offsetWidth + dx) + 'px';
+      document.getElementsByClassName("randomPizzaContainer")[i].style.width = newwidth;
     }
   }
 
@@ -498,19 +499,19 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 
 // Moves the sliding background pizzas based on scroll position
 
-// changes made to function updatePositions to boost animation performance
+// CHANGES: made to function updatePositions to boost animation performance
+// CHANGES: querySelectorAll replaced with getElementsByClassName method, I could not see much performance improvement even though it's considered more efficent
+/* CHANGES: phase variable taken out of loop to avoid multiple layout recalculation, and since it only takes 5 values, they're stored in array
+this was HUGE performance booster */
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
-// changed from querySelectorAll to getElementsByClassName method, it's supposed to be more efficient, however but I could not see much difference
-  var items = document.getElementsByClassName('mover');
-/*  phase variable taken out of loop to avoid multiple layout recalculation, and since it only takes 5 values, they're stored in array
-this was HUGE performance booster */
+  var items = document.getElementsByClassName("mover");
   var phase = [];
   for (var i = 0; i < 5; i++) {
     phase.push(Math.sin((document.body.scrollTop / 1250) + i));
   }
-// added index to phase to cycle through array
+// CHANGES: added index to phase to cycle through an rray
   for (var i = 0; i < items.length; i++) {
     items[i].style.left = items[i].basicLeft + 100 * phase[i%5] + 'px';
   }
@@ -529,13 +530,12 @@ this was HUGE performance booster */
 window.addEventListener('scroll', updatePositions);
 
 // Generates the sliding pizzas when the page loads.
-/* Fixed number of pizzas (200) is rendered, yet only a handful displays on the screen
-to reduce the number of elements rendered it's best to tie number of pizzas to viewport size
-*/
+
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  // pizzaCount variable calculate number of displayable elemens using viewport height divided by s (gives no. of rows), and multiplied by number of columns.
+  /* CHANGES: from fixed number of elements (200) to number (defined by pizzaCount) relative to viewport size:
+  pizzaCount variable calculate number of displayable elemens using viewport height divided by s (gives no. of rows), and multiplied by number of columns.*/
   var pizzaCount = (window.innerHeight/s)*cols;
   for (var i = 0; i < pizzaCount; i++) {
     var elem = document.createElement('img');
