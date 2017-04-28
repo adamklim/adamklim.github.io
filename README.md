@@ -19,6 +19,23 @@ initial stats:
 
 ## Website Performance Optimization portfolio project
 
+Major bottleneck in function updatePositions - multiple layout recalculations triggered
+
+### solution:
+* Major bottleneck in function updatePositions - multiple layout recalculations triggered
+	* Variable phase had only 5 values, so it's taken out of loop that calculate pizzas position and values are now stored in array.
+	* DOM method changed from .querySelectorAll to .getElementsByClassName.
+* Number of objects to be animated changed from fixed (200) to dependant on viewport size.
+
+
+
+## pizzas resize:
+
+* all querySelectAll replaced with getElementsByClassName
+* querySelect replaced with getElementById
+
+
+
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
 To get started, check out the repository and inspect the code.
