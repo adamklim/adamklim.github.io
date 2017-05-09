@@ -1,0 +1,49 @@
+<html>
+    <head>
+
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    </head>
+    <body>
+<!-- <div style="height: 1000px;"></div> -->
+    <section id="fh5co-counters" data-stellar-background-ratio="0.5">
+        <div class="fh5co-overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 section-heading text-center to-animate">
+                    <h2>{{ .Site.Params.counters.title | markdownify }}</h2>
+                </div>
+            </div>
+            <div class="row">
+            {{ range .Site.Params.counters.item }}
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="fh5co-counter to-animate">
+                        <i class="fh5co-counter-icon {{ .icon }} to-animate-2"></i>
+                        <span class="fh5co-counter-number js-counter" data-from="{{ .from }}" data-to="{{ .to }}" data-speed="{{ .speed }}" data-refresh-interval="{{ .interval }}">{{ .to }}</span>
+                        <span class="fh5co-counter-label">{{ .description }}</span>
+                    </div>
+                </div>
+            {{ end }}
+            </div>
+        </div>
+    </section>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Stellar Parallax -->
+    <script src="js/jquery.stellar.min.js"></script>
+    <!-- Counter -->
+    <script src="js/jquery.countTo.js"></script>
+
+    <script src="js/main.js"></script>
+    </body>
+</html>

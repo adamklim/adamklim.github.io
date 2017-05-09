@@ -1,0 +1,23 @@
+{{ "<!-- WHAT_WE_DO -->" | safeHTML }}
+<section class="padding-top" id="what_we_do">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-primary">{{ with .Site.Params.do.title }}{{ . }}{{ end }}</h2>
+        <h3 class="section-subheading">{{ with .Site.Params.do.subtitle }}{{ . | markdownify }}{{ end }}</h3>
+      </div>
+    </div>
+    {{ range .Site.Params.do.row }}
+      <div class="text-center flexbox">
+        {{ range .list }}
+          <div class="col-sx-12 col-sm-6 col-md-4 padding-bottom">
+              <i class="material-icons md-96 text-primary">{{ .icon }}</i>
+            <h3 class="section-heading">{{ if .url }}<a href="{{ .url | absURL }}">{{ .title | markdownify }}</a>{{ else }}{{ .title | markdownify }}{{ end }}</h3>
+            <p class="text-muted">{{ .description | markdownify }}</p>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+    <hr>
+  </div>
+</section>

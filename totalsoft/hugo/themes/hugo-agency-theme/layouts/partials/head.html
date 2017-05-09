@@ -1,0 +1,75 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <!-- Google Tag Manager DataLayer -->
+  <script>
+    dataLayer = [];
+  </script>
+ <!--End Google Tag Manager DataLayer -->
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WBCZLRG');</script>
+  <!-- End Google Tag Manager -->
+
+  {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.name }}<meta name="Juliana Klimiuk" content="{{ . }}">{{ end }}
+  {{ .Hugo.Generator }}
+  <title>{{ .Title }}{{ if not .IsHome }} &middot; {{ .Site.Title }}{{ end }}</title>
+  {{ "<!-- Stylesheets -->" | safeHTML }}
+  <link href="{{ "css/normalize-css.css" | absURL }}" rel="stylesheet">
+  <link href="{{ "css/bootstrap-v3.3.7/bootstrap.min.css" | absURL }}" rel="stylesheet">
+  <!-- <link href="{{ "css/masonry.css" | absURL }}" rel="stylesheet"> -->
+  <link href="{{ "css/agency.css" | absURL }}" rel="stylesheet">
+  <link href="{{ "css/jquery.form-validator-v2.3.44/theme-default.min.css" | absURL }}" rel="stylesheet">
+  <link href="{{ "css/magnific-popup.css" | absURL }}" rel="stylesheet">
+
+  {{ range .Site.Params.custom_css }}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+  {{ end }}
+
+  {{ "<!-- Custom Fonts -->" | safeHTML }}
+  <link href="{{ "font-awesome-v4.7.0/css/font-awesome.min.css" | absURL }}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  {{ with not .Site.Params.disableFonts }}
+    <link href="//fonts.googleapis.com/css?family=Roboto:400,200,100,300,700" rel="stylesheet" type="text/css">
+  {{ end }}
+
+  {{ with .Site.Params.favicon }}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ . | absURL }}">
+    <link rel="icon" type="image/x-icon" href="{{ . | absURL }}">
+  {{ end }}
+
+  {{ "<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->" | safeHTML }}
+  {{ "<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->" | safeHTML }}
+  {{ "<!--[if lt IE 9]>" | safeHTML }}
+  {{ "<![endif]-->" | safeHTML }}
+
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+
+  <!-- Hotjar Tracking Code for www.totalsoft.at -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:448214,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+
+
+
+</head>

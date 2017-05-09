@@ -1,0 +1,20 @@
+{{ "<!-- navigate -->" | safeHTML }}
+<section class="padding-top" id="services">
+  <div class="container">
+    <div class="row">
+
+    </div>
+    {{ range .Site.Params.navigate.row }}
+      <div class="row text-center">
+        {{ range .list }}
+          <div class="col-md-4">
+            <h2 class="section-heading text-primary">{{ if .url }}<a href="{{ .url | relURL }}">{{ .title | markdownify }}</a>{{ else }}{{ .title | markdownify }}{{ end }}</h2>
+            <p class="text-muted">{{ .description | markdownify }}</p>
+            <i class="material-icons md-48">{{ if .url }}<a href="{{ .url | relURL }}">keyboard_arrow_down</a>{{ else }}{{ .title | markdownify }}{{ end }}</i>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+    <hr id="who_we_are">
+  </div>
+</section>

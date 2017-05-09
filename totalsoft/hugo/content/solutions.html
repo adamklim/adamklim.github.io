@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+
+  {{ partial "head.html" . }}
+    {{ partial "js.html" . }}
+
+  <body id="page-top" class="index">
+
+    <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBCZLRG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    {{ partial "nav1.html" . }}
+    {{ partial "services.html" . }}
+    {{ partial "solutions.html" . }}
+    {{ partial "contact-solutions.html" . }}
+    {{ partial "footer.html" . }}
+    {{ partial "modals.html" . }}
+    {{ partial "hubspot.html" . }}
+  </body>
+</html>
