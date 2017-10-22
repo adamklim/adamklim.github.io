@@ -118,7 +118,7 @@ var viewModel = function(){
                     // reset timeout on success
                     clearTimeout(wikiRequestTimeout);
                     // add content to infowindow
-                    InfoWindow.setContent("<h3>"+response[0]+"</h3>"+"<p>"+response[2][0]+"<p>");
+                    InfoWindow.setContent("<p>from Wikipedia:</p><br><h3>"+response[0]+"</h3>"+"<p>"+response[2][0]+"<p>");
                 }
             });
         })();
