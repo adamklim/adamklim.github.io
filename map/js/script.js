@@ -13,7 +13,7 @@ var viewModel = function(){
     (function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 48.2084114, lng: 16.3734707},
-            zoom: 15,
+            zoom: 14,
             disableDefaultUI: true,
             styles: mapstyle,
             info: new google.maps.InfoWindow()
