@@ -41,10 +41,12 @@ h1 {
 
 .nav-item-input {
   display: block;
-  padding: 0.5em 2em;
-  font-size: 1.2em;
+  padding: 0.5em 1.5em;
+  margin-left: 10px;
+  font-size: 1em;
   text-decoration: none;
   transition: color 0.2s, background 0.5s;
+  width: 225px;
 }
 
 li:hover {
