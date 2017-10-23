@@ -8,18 +8,18 @@
         <title>Neighborhood map - Vienna</title>
     </head>
     <body>
-        <div class="navigation">
+        <nav class="navigation">
             <h1>Visit Vienna</h1>
             <input data-bind="textInput: searchLoc, event: {input: updateList}, css: {'nav-item-input':true}" placeholder="Search"></input>
             <ul data-bind="foreach: filteredLocArray">
                 <li data-bind="text: name, click: $parent.markerSet, css: {'nav-item':true}"></li>
             </ul>
-        </div>
+        </nav>
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger"></label>
-        <div class="site-wrap">
+        <section class="site-wrap">
             <div id="map"></div>
-        </div>
+        </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
     <script src="js/model.js"></script>

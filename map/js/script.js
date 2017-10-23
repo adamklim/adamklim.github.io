@@ -1,5 +1,5 @@
 /*====ViewModel====*/
-var viewModel = function(){
+var ViewModel = function(){
     var self = this;
 
     self.locArray=ko.observableArray([]);
@@ -28,7 +28,7 @@ var viewModel = function(){
     });
 
 // set default infowindow width
-    var InfoWindow = new google.maps.InfoWindow({
+    var infoWindow = new google.maps.InfoWindow({
         maxWidth: 200
     });
 
@@ -63,7 +63,7 @@ var viewModel = function(){
 
 // set marker properties
     self.markerSet = function(elem){
-        console.log(elem);
+        // console.log(elem);
 
         self.markerShow();
         self.markerBounce(elem);
@@ -73,7 +73,7 @@ var viewModel = function(){
     // on search, rebuild location list
     self.updateList = function(elem){
         elem.filteredLocArray().forEach(function(elem){
-            elem.marker.setMap(null);
+            elem.marker.setVisible(false);
         });
 
         // reset list
@@ -105,7 +105,7 @@ var viewModel = function(){
     self.wikiInfo = function(elem){
 
         // reset infowindow
-        InfoWindow.setContent("")
+        infoWindow.setContent("")
         this.getWikiInfo = (function() {
             // Wikipedia Information
             var wikiUrl = "https://en.wikipedia.org/w/api.php?&format=json&action=opensearch&search=" + elem.marker.title;
@@ -118,15 +118,15 @@ var viewModel = function(){
                     // reset timeout on success
                     clearTimeout(wikiRequestTimeout);
                     // add content to infowindow
-                    InfoWindow.setContent("<p>from Wikipedia:</p><br><h3>"+response[0]+"</h3>"+"<p>"+response[2][0]+"<p>");
+                    infoWindow.setContent("<p>from Wikipedia:</p><br><h3>"+response[0]+"</h3>"+"<p>"+response[2][0]+"<p>");
                 }
             });
         })();
         // open info window
         google.maps.event.addListener(map, "click", function(event) {
-            InfoWindow.close();
+            infoWindow.close();
         });
-        InfoWindow.open(map, elem.marker);
+        infoWindow.open(map, elem.marker);
     }
 }
 
@@ -139,11 +139,12 @@ var loc = function(locs){
     var marker = new google.maps.Marker({
         map: map,
         position: this.position(),
-        title: this.name()
+        title: this.name(),
+        visible:true
     });
     this.marker = marker;
         google.maps.event.addDomListener(window, 'resize', function() {
-        map.setCenter(center);
+        map.setCenter(map.center);
     });
 }
 
@@ -155,7 +156,5 @@ var loc = function(locs){
 
     // initialize
     function initialize(){
-        ko.applyBindings(new viewModel());
+        ko.applyBindings(new ViewModel());
     }
-
-/* https://maps.googleapis.com/maps/api/place/details/json?&placeid=ChIJn-cawHkHbUcRZ9e9xwWMoEM&key=AIzaSyCQdPYE5wBMpe0YjS-N0g8J6KQMyGHSyhw */

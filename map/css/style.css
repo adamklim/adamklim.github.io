@@ -12,7 +12,7 @@
 
 h1 {
   display: block;
-  padding: 1em 1.5em;
+  padding: 1em;
   color: white;
   font-size: 2em;
 }
@@ -32,7 +32,7 @@ h1 {
 
 .nav-item {
   display: block;
-  padding: 0.5em 2em;
+  padding: 0.5em 1.5em;
   color: white;
   font-size: 1.2em;
   text-decoration: none;
@@ -84,11 +84,11 @@ label[for="nav-trigger"] {
 }
 
 .nav-trigger:checked + label {
-  left: 315px;
+  left: 265px;
 }
 
 .nav-trigger:checked ~ .site-wrap {
-  left: 300px;
+  left: 250px;
   /*box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);*/
 }
 
